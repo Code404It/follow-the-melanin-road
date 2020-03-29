@@ -31,13 +31,13 @@ class CLI
 
 
     def pick_a_brewery
-        puts "Pick a brewery:"
+        puts "Let's ease on down the road! Pick another number:"
         input = gets.strip.to_i
         if input < Brewery.all.length 
-            brewery = Brewery.all[input -1]
-            puts "#{brewery.name}, #{brewery.url}, #{brewery.location}"
+            brewery = Brewery.all[input-1]
+            puts "#{brewery.name}, #{brewery.location}, #{brewery.url}"
         else 
-            puts "You drunk dialed! Please choose a number." 
+            puts "Friends don't let friends drunk dial! Please choose a number." 
             pick_a_brewery
             say_good_bye
         end
@@ -46,6 +46,7 @@ class CLI
     
 end 
     def say_good_bye
-        puts "Diversity is NOTHING without inclusion. Thanks for following THE MELANIN ROAD!"
+        puts "Diversity is NOTHING without inclusion."
+        puts "Thank you again for following the Melanin Road!"
     end
 end
