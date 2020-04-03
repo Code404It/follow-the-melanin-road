@@ -28,11 +28,7 @@ doc.css("[data-page-element-index]")[12].css("p").each do |brewery|
     end 
 end
 
-    def self.scrape_individual_brewery(brewery)
-    html = open(THRILLIST_URL+brewery.url)
-    doc = Nokogiri::HTML(html)
     
-end
 
 end 
 
