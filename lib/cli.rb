@@ -33,8 +33,9 @@ class CLI
     def pick_a_brewery
         puts "Let's ease on down the road! Pick another number:"
         input = gets.strip.to_i
-        if input < Brewery.all.length 
-            brewery = Brewery.all[input-1]
+        if input.to_i.between?(1,Brewery.all.length)
+            new_input = input.to_i-1
+            brewery = Brewery.all[new_input]
             puts "#{brewery.name}, #{brewery.location}, #{brewery.url}"
         else 
             puts "Friends don't let friends drunk dial! Please choose a number." 
