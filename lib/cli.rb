@@ -17,11 +17,8 @@ class CLI
         puts "2. West"
         input = gets.strip.to_i
 
-        if input == 1 
-            Scraper.scrape_thrillist_east
-            Brewery.list
-        elsif input == 2
-            Scraper.scrape_thrillist_west 
+        if input == 1 || input == 2
+            Scraper.scrape_thrillist(input)
             Brewery.list
     else
         puts "You drunk dialed! Please choose a number."
@@ -40,7 +37,7 @@ class CLI
         else 
             puts "Friends don't let friends drunk dial! Please choose a number." 
             pick_a_brewery
-            say_good_bye
+            
         end
     end 
 
